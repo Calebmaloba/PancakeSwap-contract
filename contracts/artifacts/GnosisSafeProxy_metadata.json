@@ -1,0 +1,68 @@
+{
+	"compiler": {
+		"version": "0.8.25+commit.b61c2a91"
+	},
+	"language": "Solidity",
+	"output": {
+		"abi": [
+			{
+				"inputs": [
+					{
+						"internalType": "address",
+						"name": "_singleton",
+						"type": "address"
+					}
+				],
+				"stateMutability": "nonpayable",
+				"type": "constructor"
+			},
+			{
+				"stateMutability": "payable",
+				"type": "fallback"
+			}
+		],
+		"devdoc": {
+			"kind": "dev",
+			"methods": {
+				"constructor": {
+					"details": "Constructor function sets address of singleton contract.",
+					"params": {
+						"_singleton": "Singleton address."
+					}
+				}
+			},
+			"version": 1
+		},
+		"userdoc": {
+			"kind": "user",
+			"methods": {},
+			"version": 1
+		}
+	},
+	"settings": {
+		"compilationTarget": {
+			"contracts/GnosisSafeProxy.sol": "GnosisSafeProxy"
+		},
+		"evmVersion": "cancun",
+		"libraries": {},
+		"metadata": {
+			"bytecodeHash": "ipfs"
+		},
+		"optimizer": {
+			"enabled": true,
+			"runs": 200
+		},
+		"remappings": []
+	},
+	"sources": {
+		"contracts/GnosisSafeProxy.sol": {
+			"keccak256": "0x398d88b572e2aec1a8c91d59afadc6a0ab3b4eba8a456579719701977f0de00a",
+			"license": "MIT",
+			"urls": [
+				"bzz-raw://9d824ccce788ba48873f42941bfb052660b886ef5ea3fc469b96a813ba53f69e",
+				"dweb:/ipfs/QmbFZVN3YcFQrgSAfi7HgprGMMgKKQUe5uakfsxJqHgGbZ"
+			]
+		}
+	},
+	"version": 1
+}

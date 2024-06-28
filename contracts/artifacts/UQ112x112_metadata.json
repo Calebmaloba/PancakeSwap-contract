@@ -1,0 +1,45 @@
+{
+	"compiler": {
+		"version": "0.8.25+commit.b61c2a91"
+	},
+	"language": "Solidity",
+	"output": {
+		"abi": [],
+		"devdoc": {
+			"kind": "dev",
+			"methods": {},
+			"version": 1
+		},
+		"userdoc": {
+			"kind": "user",
+			"methods": {},
+			"version": 1
+		}
+	},
+	"settings": {
+		"compilationTarget": {
+			"contracts/PancakeFactory_flattened.sol": "UQ112x112"
+		},
+		"evmVersion": "cancun",
+		"libraries": {},
+		"metadata": {
+			"bytecodeHash": "ipfs"
+		},
+		"optimizer": {
+			"enabled": true,
+			"runs": 200
+		},
+		"remappings": []
+	},
+	"sources": {
+		"contracts/PancakeFactory_flattened.sol": {
+			"keccak256": "0x2f5d0bb66c0525fd9346d5a6c3ae31d97c20581fb10bef4fbe135a4f18b12a3d",
+			"license": "MIT",
+			"urls": [
+				"bzz-raw://01e22c8d7f3604b4a603c6c8259ab3e7a09401ce0272957233ff250513926207",
+				"dweb:/ipfs/QmULrRnJFGe9GVetMafFGdyVDCnxvtcp1NLkR8oCcVMmyS"
+			]
+		}
+	},
+	"version": 1
+}

@@ -1,0 +1,45 @@
+{
+	"compiler": {
+		"version": "0.8.25+commit.b61c2a91"
+	},
+	"language": "Solidity",
+	"output": {
+		"abi": [],
+		"devdoc": {
+			"kind": "dev",
+			"methods": {},
+			"version": 1
+		},
+		"userdoc": {
+			"kind": "user",
+			"methods": {},
+			"version": 1
+		}
+	},
+	"settings": {
+		"compilationTarget": {
+			"contracts/PancakeRouter_flattened.sol": "PancakeLibrary"
+		},
+		"evmVersion": "cancun",
+		"libraries": {},
+		"metadata": {
+			"bytecodeHash": "ipfs"
+		},
+		"optimizer": {
+			"enabled": true,
+			"runs": 200
+		},
+		"remappings": []
+	},
+	"sources": {
+		"contracts/PancakeRouter_flattened.sol": {
+			"keccak256": "0x6a6531830c75c773ebd773fae491097b3c1bbd0bc8322c0809ba89f56568d804",
+			"license": "MIT",
+			"urls": [
+				"bzz-raw://e9e092846331514408eeeacfa3fa8068d928504b59d6c9d22e4b95307d94b69e",
+				"dweb:/ipfs/QmcfZYgTJjYKFzyvHFysqjoAPYNUnMQaKyFyeZUsc6qCHt"
+			]
+		}
+	},
+	"version": 1
+}

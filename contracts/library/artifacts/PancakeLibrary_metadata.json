@@ -1,0 +1,61 @@
+{
+	"compiler": {
+		"version": "0.8.25+commit.b61c2a91"
+	},
+	"language": "Solidity",
+	"output": {
+		"abi": [],
+		"devdoc": {
+			"kind": "dev",
+			"methods": {},
+			"version": 1
+		},
+		"userdoc": {
+			"kind": "user",
+			"methods": {},
+			"version": 1
+		}
+	},
+	"settings": {
+		"compilationTarget": {
+			"contracts/library/PancakeLibrary.sol": "PancakeLibrary"
+		},
+		"evmVersion": "cancun",
+		"libraries": {},
+		"metadata": {
+			"bytecodeHash": "ipfs"
+		},
+		"optimizer": {
+			"enabled": true,
+			"runs": 200
+		},
+		"remappings": []
+	},
+	"sources": {
+		"contracts/interface/IPancakePair.sol": {
+			"keccak256": "0x0cea957368134a00906979620d60eb92d1367c55336d59fb4922fcf44151ef4f",
+			"license": "MIT",
+			"urls": [
+				"bzz-raw://575a22987010556a76212a67e2e396c75622fbbc2792b54e367ef35c17fe2413",
+				"dweb:/ipfs/QmUjf1VuFLKq2TXDx79qB3GAKdQ2u2RrcAEme2aLubNL3U"
+			]
+		},
+		"contracts/library/PancakeLibrary.sol": {
+			"keccak256": "0xa1cb31299819930673c30ed91edb4896d095e8adbe0b3b1be8329f3a65f28153",
+			"license": "MIT",
+			"urls": [
+				"bzz-raw://61fb03eff1eac4253a6e378c2ec4b42d9024a63c69d459c460504b8b64f301e6",
+				"dweb:/ipfs/QmdLBXCjhv7HCY18hoCrUajHFJGagemfvXf9gnMFcBDKPD"
+			]
+		},
+		"contracts/library/SafeMath.sol": {
+			"keccak256": "0xeee501f16bb99087bc4ed4ad8aad4ba5ef5ed24d9d9507cf984bb8873c7f9056",
+			"license": "MIT",
+			"urls": [
+				"bzz-raw://ee4efcacc7572eb49581920d883937833471e86d7a7a4b4ec8c5254d6526b548",
+				"dweb:/ipfs/QmWAwTdXV1LMUo6QGRdfFVhL9jZT9EK1keCYeAA6Rc12Mg"
+			]
+		}
+	},
+	"version": 1
+}

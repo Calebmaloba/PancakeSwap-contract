@@ -1,0 +1,1541 @@
+{
+	"compiler": {
+		"version": "0.8.25+commit.b61c2a91"
+	},
+	"language": "Solidity",
+	"output": {
+		"abi": [
+			{
+				"anonymous": false,
+				"inputs": [
+					{
+						"indexed": false,
+						"internalType": "address",
+						"name": "owner",
+						"type": "address"
+					}
+				],
+				"name": "AddedOwner",
+				"type": "event"
+			},
+			{
+				"anonymous": false,
+				"inputs": [
+					{
+						"indexed": true,
+						"internalType": "bytes32",
+						"name": "approvedHash",
+						"type": "bytes32"
+					},
+					{
+						"indexed": true,
+						"internalType": "address",
+						"name": "owner",
+						"type": "address"
+					}
+				],
+				"name": "ApproveHash",
+				"type": "event"
+			},
+			{
+				"anonymous": false,
+				"inputs": [
+					{
+						"indexed": false,
+						"internalType": "address",
+						"name": "handler",
+						"type": "address"
+					}
+				],
+				"name": "ChangedFallbackHandler",
+				"type": "event"
+			},
+			{
+				"anonymous": false,
+				"inputs": [
+					{
+						"indexed": false,
+						"internalType": "address",
+						"name": "guard",
+						"type": "address"
+					}
+				],
+				"name": "ChangedGuard",
+				"type": "event"
+			},
+			{
+				"anonymous": false,
+				"inputs": [
+					{
+						"indexed": false,
+						"internalType": "uint256",
+						"name": "threshold",
+						"type": "uint256"
+					}
+				],
+				"name": "ChangedThreshold",
+				"type": "event"
+			},
+			{
+				"anonymous": false,
+				"inputs": [
+					{
+						"indexed": false,
+						"internalType": "address",
+						"name": "module",
+						"type": "address"
+					}
+				],
+				"name": "DisabledModule",
+				"type": "event"
+			},
+			{
+				"anonymous": false,
+				"inputs": [
+					{
+						"indexed": false,
+						"internalType": "address",
+						"name": "module",
+						"type": "address"
+					}
+				],
+				"name": "EnabledModule",
+				"type": "event"
+			},
+			{
+				"anonymous": false,
+				"inputs": [
+					{
+						"indexed": false,
+						"internalType": "bytes32",
+						"name": "txHash",
+						"type": "bytes32"
+					},
+					{
+						"indexed": false,
+						"internalType": "uint256",
+						"name": "payment",
+						"type": "uint256"
+					}
+				],
+				"name": "ExecutionFailure",
+				"type": "event"
+			},
+			{
+				"anonymous": false,
+				"inputs": [
+					{
+						"indexed": true,
+						"internalType": "address",
+						"name": "module",
+						"type": "address"
+					}
+				],
+				"name": "ExecutionFromModuleFailure",
+				"type": "event"
+			},
+			{
+				"anonymous": false,
+				"inputs": [
+					{
+						"indexed": true,
+						"internalType": "address",
+						"name": "module",
+						"type": "address"
+					}
+				],
+				"name": "ExecutionFromModuleSuccess",
+				"type": "event"
+			},
+			{
+				"anonymous": false,
+				"inputs": [
+					{
+						"indexed": false,
+						"internalType": "bytes32",
+						"name": "txHash",
+						"type": "bytes32"
+					},
+					{
+						"indexed": false,
+						"internalType": "uint256",
+						"name": "payment",
+						"type": "uint256"
+					}
+				],
+				"name": "ExecutionSuccess",
+				"type": "event"
+			},
+			{
+				"anonymous": false,
+				"inputs": [
+					{
+						"indexed": false,
+						"internalType": "address",
+						"name": "owner",
+						"type": "address"
+					}
+				],
+				"name": "RemovedOwner",
+				"type": "event"
+			},
+			{
+				"anonymous": false,
+				"inputs": [
+					{
+						"indexed": false,
+						"internalType": "address",
+						"name": "module",
+						"type": "address"
+					},
+					{
+						"indexed": false,
+						"internalType": "address",
+						"name": "to",
+						"type": "address"
+					},
+					{
+						"indexed": false,
+						"internalType": "uint256",
+						"name": "value",
+						"type": "uint256"
+					},
+					{
+						"indexed": false,
+						"internalType": "bytes",
+						"name": "data",
+						"type": "bytes"
+					},
+					{
+						"indexed": false,
+						"internalType": "enum Enum.Operation",
+						"name": "operation",
+						"type": "uint8"
+					}
+				],
+				"name": "SafeModuleTransaction",
+				"type": "event"
+			},
+			{
+				"anonymous": false,
+				"inputs": [
+					{
+						"indexed": false,
+						"internalType": "address",
+						"name": "to",
+						"type": "address"
+					},
+					{
+						"indexed": false,
+						"internalType": "uint256",
+						"name": "value",
+						"type": "uint256"
+					},
+					{
+						"indexed": false,
+						"internalType": "bytes",
+						"name": "data",
+						"type": "bytes"
+					},
+					{
+						"indexed": false,
+						"internalType": "enum Enum.Operation",
+						"name": "operation",
+						"type": "uint8"
+					},
+					{
+						"indexed": false,
+						"internalType": "uint256",
+						"name": "safeTxGas",
+						"type": "uint256"
+					},
+					{
+						"indexed": false,
+						"internalType": "uint256",
+						"name": "baseGas",
+						"type": "uint256"
+					},
+					{
+						"indexed": false,
+						"internalType": "uint256",
+						"name": "gasPrice",
+						"type": "uint256"
+					},
+					{
+						"indexed": false,
+						"internalType": "address",
+						"name": "gasToken",
+						"type": "address"
+					},
+					{
+						"indexed": false,
+						"internalType": "address payable",
+						"name": "refundReceiver",
+						"type": "address"
+					},
+					{
+						"indexed": false,
+						"internalType": "bytes",
+						"name": "signatures",
+						"type": "bytes"
+					},
+					{
+						"indexed": false,
+						"internalType": "bytes",
+						"name": "additionalInfo",
+						"type": "bytes"
+					}
+				],
+				"name": "SafeMultiSigTransaction",
+				"type": "event"
+			},
+			{
+				"anonymous": false,
+				"inputs": [
+					{
+						"indexed": true,
+						"internalType": "address",
+						"name": "sender",
+						"type": "address"
+					},
+					{
+						"indexed": false,
+						"internalType": "uint256",
+						"name": "value",
+						"type": "uint256"
+					}
+				],
+				"name": "SafeReceived",
+				"type": "event"
+			},
+			{
+				"anonymous": false,
+				"inputs": [
+					{
+						"indexed": true,
+						"internalType": "address",
+						"name": "initiator",
+						"type": "address"
+					},
+					{
+						"indexed": false,
+						"internalType": "address[]",
+						"name": "owners",
+						"type": "address[]"
+					},
+					{
+						"indexed": false,
+						"internalType": "uint256",
+						"name": "threshold",
+						"type": "uint256"
+					},
+					{
+						"indexed": false,
+						"internalType": "address",
+						"name": "initializer",
+						"type": "address"
+					},
+					{
+						"indexed": false,
+						"internalType": "address",
+						"name": "fallbackHandler",
+						"type": "address"
+					}
+				],
+				"name": "SafeSetup",
+				"type": "event"
+			},
+			{
+				"anonymous": false,
+				"inputs": [
+					{
+						"indexed": true,
+						"internalType": "bytes32",
+						"name": "msgHash",
+						"type": "bytes32"
+					}
+				],
+				"name": "SignMsg",
+				"type": "event"
+			},
+			{
+				"stateMutability": "nonpayable",
+				"type": "fallback"
+			},
+			{
+				"inputs": [],
+				"name": "VERSION",
+				"outputs": [
+					{
+						"internalType": "string",
+						"name": "",
+						"type": "string"
+					}
+				],
+				"stateMutability": "view",
+				"type": "function"
+			},
+			{
+				"inputs": [
+					{
+						"internalType": "address",
+						"name": "owner",
+						"type": "address"
+					},
+					{
+						"internalType": "uint256",
+						"name": "_threshold",
+						"type": "uint256"
+					}
+				],
+				"name": "addOwnerWithThreshold",
+				"outputs": [],
+				"stateMutability": "nonpayable",
+				"type": "function"
+			},
+			{
+				"inputs": [
+					{
+						"internalType": "bytes32",
+						"name": "hashToApprove",
+						"type": "bytes32"
+					}
+				],
+				"name": "approveHash",
+				"outputs": [],
+				"stateMutability": "nonpayable",
+				"type": "function"
+			},
+			{
+				"inputs": [
+					{
+						"internalType": "address",
+						"name": "",
+						"type": "address"
+					},
+					{
+						"internalType": "bytes32",
+						"name": "",
+						"type": "bytes32"
+					}
+				],
+				"name": "approvedHashes",
+				"outputs": [
+					{
+						"internalType": "uint256",
+						"name": "",
+						"type": "uint256"
+					}
+				],
+				"stateMutability": "view",
+				"type": "function"
+			},
+			{
+				"inputs": [
+					{
+						"internalType": "uint256",
+						"name": "_threshold",
+						"type": "uint256"
+					}
+				],
+				"name": "changeThreshold",
+				"outputs": [],
+				"stateMutability": "nonpayable",
+				"type": "function"
+			},
+			{
+				"inputs": [
+					{
+						"internalType": "bytes32",
+						"name": "dataHash",
+						"type": "bytes32"
+					},
+					{
+						"internalType": "bytes",
+						"name": "data",
+						"type": "bytes"
+					},
+					{
+						"internalType": "bytes",
+						"name": "signatures",
+						"type": "bytes"
+					},
+					{
+						"internalType": "uint256",
+						"name": "requiredSignatures",
+						"type": "uint256"
+					}
+				],
+				"name": "checkNSignatures",
+				"outputs": [],
+				"stateMutability": "view",
+				"type": "function"
+			},
+			{
+				"inputs": [
+					{
+						"internalType": "bytes32",
+						"name": "dataHash",
+						"type": "bytes32"
+					},
+					{
+						"internalType": "bytes",
+						"name": "data",
+						"type": "bytes"
+					},
+					{
+						"internalType": "bytes",
+						"name": "signatures",
+						"type": "bytes"
+					}
+				],
+				"name": "checkSignatures",
+				"outputs": [],
+				"stateMutability": "view",
+				"type": "function"
+			},
+			{
+				"inputs": [
+					{
+						"internalType": "address",
+						"name": "prevModule",
+						"type": "address"
+					},
+					{
+						"internalType": "address",
+						"name": "module",
+						"type": "address"
+					}
+				],
+				"name": "disableModule",
+				"outputs": [],
+				"stateMutability": "nonpayable",
+				"type": "function"
+			},
+			{
+				"inputs": [],
+				"name": "domainSeparator",
+				"outputs": [
+					{
+						"internalType": "bytes32",
+						"name": "",
+						"type": "bytes32"
+					}
+				],
+				"stateMutability": "view",
+				"type": "function"
+			},
+			{
+				"inputs": [
+					{
+						"internalType": "address",
+						"name": "module",
+						"type": "address"
+					}
+				],
+				"name": "enableModule",
+				"outputs": [],
+				"stateMutability": "nonpayable",
+				"type": "function"
+			},
+			{
+				"inputs": [
+					{
+						"internalType": "address",
+						"name": "to",
+						"type": "address"
+					},
+					{
+						"internalType": "uint256",
+						"name": "value",
+						"type": "uint256"
+					},
+					{
+						"internalType": "bytes",
+						"name": "data",
+						"type": "bytes"
+					},
+					{
+						"internalType": "enum Enum.Operation",
+						"name": "operation",
+						"type": "uint8"
+					},
+					{
+						"internalType": "uint256",
+						"name": "safeTxGas",
+						"type": "uint256"
+					},
+					{
+						"internalType": "uint256",
+						"name": "baseGas",
+						"type": "uint256"
+					},
+					{
+						"internalType": "uint256",
+						"name": "gasPrice",
+						"type": "uint256"
+					},
+					{
+						"internalType": "address",
+						"name": "gasToken",
+						"type": "address"
+					},
+					{
+						"internalType": "address",
+						"name": "refundReceiver",
+						"type": "address"
+					},
+					{
+						"internalType": "uint256",
+						"name": "_nonce",
+						"type": "uint256"
+					}
+				],
+				"name": "encodeTransactionData",
+				"outputs": [
+					{
+						"internalType": "bytes",
+						"name": "",
+						"type": "bytes"
+					}
+				],
+				"stateMutability": "view",
+				"type": "function"
+			},
+			{
+				"inputs": [
+					{
+						"internalType": "address",
+						"name": "to",
+						"type": "address"
+					},
+					{
+						"internalType": "uint256",
+						"name": "value",
+						"type": "uint256"
+					},
+					{
+						"internalType": "bytes",
+						"name": "data",
+						"type": "bytes"
+					},
+					{
+						"internalType": "enum Enum.Operation",
+						"name": "operation",
+						"type": "uint8"
+					},
+					{
+						"internalType": "uint256",
+						"name": "safeTxGas",
+						"type": "uint256"
+					},
+					{
+						"internalType": "uint256",
+						"name": "baseGas",
+						"type": "uint256"
+					},
+					{
+						"internalType": "uint256",
+						"name": "gasPrice",
+						"type": "uint256"
+					},
+					{
+						"internalType": "address",
+						"name": "gasToken",
+						"type": "address"
+					},
+					{
+						"internalType": "address payable",
+						"name": "refundReceiver",
+						"type": "address"
+					},
+					{
+						"internalType": "bytes",
+						"name": "signatures",
+						"type": "bytes"
+					}
+				],
+				"name": "execTransaction",
+				"outputs": [
+					{
+						"internalType": "bool",
+						"name": "",
+						"type": "bool"
+					}
+				],
+				"stateMutability": "payable",
+				"type": "function"
+			},
+			{
+				"inputs": [
+					{
+						"internalType": "address",
+						"name": "to",
+						"type": "address"
+					},
+					{
+						"internalType": "uint256",
+						"name": "value",
+						"type": "uint256"
+					},
+					{
+						"internalType": "bytes",
+						"name": "data",
+						"type": "bytes"
+					},
+					{
+						"internalType": "enum Enum.Operation",
+						"name": "operation",
+						"type": "uint8"
+					}
+				],
+				"name": "execTransactionFromModule",
+				"outputs": [
+					{
+						"internalType": "bool",
+						"name": "success",
+						"type": "bool"
+					}
+				],
+				"stateMutability": "nonpayable",
+				"type": "function"
+			},
+			{
+				"inputs": [
+					{
+						"internalType": "address",
+						"name": "to",
+						"type": "address"
+					},
+					{
+						"internalType": "uint256",
+						"name": "value",
+						"type": "uint256"
+					},
+					{
+						"internalType": "bytes",
+						"name": "data",
+						"type": "bytes"
+					},
+					{
+						"internalType": "enum Enum.Operation",
+						"name": "operation",
+						"type": "uint8"
+					}
+				],
+				"name": "execTransactionFromModuleReturnData",
+				"outputs": [
+					{
+						"internalType": "bool",
+						"name": "success",
+						"type": "bool"
+					},
+					{
+						"internalType": "bytes",
+						"name": "returnData",
+						"type": "bytes"
+					}
+				],
+				"stateMutability": "nonpayable",
+				"type": "function"
+			},
+			{
+				"inputs": [],
+				"name": "getChainId",
+				"outputs": [
+					{
+						"internalType": "uint256",
+						"name": "",
+						"type": "uint256"
+					}
+				],
+				"stateMutability": "view",
+				"type": "function"
+			},
+			{
+				"inputs": [
+					{
+						"internalType": "address",
+						"name": "start",
+						"type": "address"
+					},
+					{
+						"internalType": "uint256",
+						"name": "pageSize",
+						"type": "uint256"
+					}
+				],
+				"name": "getModulesPaginated",
+				"outputs": [
+					{
+						"internalType": "address[]",
+						"name": "array",
+						"type": "address[]"
+					},
+					{
+						"internalType": "address",
+						"name": "next",
+						"type": "address"
+					}
+				],
+				"stateMutability": "view",
+				"type": "function"
+			},
+			{
+				"inputs": [],
+				"name": "getOwners",
+				"outputs": [
+					{
+						"internalType": "address[]",
+						"name": "",
+						"type": "address[]"
+					}
+				],
+				"stateMutability": "view",
+				"type": "function"
+			},
+			{
+				"inputs": [
+					{
+						"internalType": "uint256",
+						"name": "offset",
+						"type": "uint256"
+					},
+					{
+						"internalType": "uint256",
+						"name": "length",
+						"type": "uint256"
+					}
+				],
+				"name": "getStorageAt",
+				"outputs": [
+					{
+						"internalType": "bytes",
+						"name": "",
+						"type": "bytes"
+					}
+				],
+				"stateMutability": "view",
+				"type": "function"
+			},
+			{
+				"inputs": [],
+				"name": "getThreshold",
+				"outputs": [
+					{
+						"internalType": "uint256",
+						"name": "",
+						"type": "uint256"
+					}
+				],
+				"stateMutability": "view",
+				"type": "function"
+			},
+			{
+				"inputs": [
+					{
+						"internalType": "address",
+						"name": "to",
+						"type": "address"
+					},
+					{
+						"internalType": "uint256",
+						"name": "value",
+						"type": "uint256"
+					},
+					{
+						"internalType": "bytes",
+						"name": "data",
+						"type": "bytes"
+					},
+					{
+						"internalType": "enum Enum.Operation",
+						"name": "operation",
+						"type": "uint8"
+					},
+					{
+						"internalType": "uint256",
+						"name": "safeTxGas",
+						"type": "uint256"
+					},
+					{
+						"internalType": "uint256",
+						"name": "baseGas",
+						"type": "uint256"
+					},
+					{
+						"internalType": "uint256",
+						"name": "gasPrice",
+						"type": "uint256"
+					},
+					{
+						"internalType": "address",
+						"name": "gasToken",
+						"type": "address"
+					},
+					{
+						"internalType": "address",
+						"name": "refundReceiver",
+						"type": "address"
+					},
+					{
+						"internalType": "uint256",
+						"name": "_nonce",
+						"type": "uint256"
+					}
+				],
+				"name": "getTransactionHash",
+				"outputs": [
+					{
+						"internalType": "bytes32",
+						"name": "",
+						"type": "bytes32"
+					}
+				],
+				"stateMutability": "view",
+				"type": "function"
+			},
+			{
+				"inputs": [
+					{
+						"internalType": "address",
+						"name": "module",
+						"type": "address"
+					}
+				],
+				"name": "isModuleEnabled",
+				"outputs": [
+					{
+						"internalType": "bool",
+						"name": "",
+						"type": "bool"
+					}
+				],
+				"stateMutability": "view",
+				"type": "function"
+			},
+			{
+				"inputs": [
+					{
+						"internalType": "address",
+						"name": "owner",
+						"type": "address"
+					}
+				],
+				"name": "isOwner",
+				"outputs": [
+					{
+						"internalType": "bool",
+						"name": "",
+						"type": "bool"
+					}
+				],
+				"stateMutability": "view",
+				"type": "function"
+			},
+			{
+				"inputs": [],
+				"name": "nonce",
+				"outputs": [
+					{
+						"internalType": "uint256",
+						"name": "",
+						"type": "uint256"
+					}
+				],
+				"stateMutability": "view",
+				"type": "function"
+			},
+			{
+				"inputs": [
+					{
+						"internalType": "address",
+						"name": "prevOwner",
+						"type": "address"
+					},
+					{
+						"internalType": "address",
+						"name": "owner",
+						"type": "address"
+					},
+					{
+						"internalType": "uint256",
+						"name": "_threshold",
+						"type": "uint256"
+					}
+				],
+				"name": "removeOwner",
+				"outputs": [],
+				"stateMutability": "nonpayable",
+				"type": "function"
+			},
+			{
+				"inputs": [
+					{
+						"internalType": "address",
+						"name": "to",
+						"type": "address"
+					},
+					{
+						"internalType": "uint256",
+						"name": "value",
+						"type": "uint256"
+					},
+					{
+						"internalType": "bytes",
+						"name": "data",
+						"type": "bytes"
+					},
+					{
+						"internalType": "enum Enum.Operation",
+						"name": "operation",
+						"type": "uint8"
+					}
+				],
+				"name": "requiredTxGas",
+				"outputs": [
+					{
+						"internalType": "uint256",
+						"name": "",
+						"type": "uint256"
+					}
+				],
+				"stateMutability": "nonpayable",
+				"type": "function"
+			},
+			{
+				"inputs": [
+					{
+						"internalType": "address",
+						"name": "handler",
+						"type": "address"
+					}
+				],
+				"name": "setFallbackHandler",
+				"outputs": [],
+				"stateMutability": "nonpayable",
+				"type": "function"
+			},
+			{
+				"inputs": [
+					{
+						"internalType": "address",
+						"name": "guard",
+						"type": "address"
+					}
+				],
+				"name": "setGuard",
+				"outputs": [],
+				"stateMutability": "nonpayable",
+				"type": "function"
+			},
+			{
+				"inputs": [
+					{
+						"internalType": "address[]",
+						"name": "_owners",
+						"type": "address[]"
+					},
+					{
+						"internalType": "uint256",
+						"name": "_threshold",
+						"type": "uint256"
+					},
+					{
+						"internalType": "address",
+						"name": "to",
+						"type": "address"
+					},
+					{
+						"internalType": "bytes",
+						"name": "data",
+						"type": "bytes"
+					},
+					{
+						"internalType": "address",
+						"name": "fallbackHandler",
+						"type": "address"
+					},
+					{
+						"internalType": "address",
+						"name": "paymentToken",
+						"type": "address"
+					},
+					{
+						"internalType": "uint256",
+						"name": "payment",
+						"type": "uint256"
+					},
+					{
+						"internalType": "address payable",
+						"name": "paymentReceiver",
+						"type": "address"
+					}
+				],
+				"name": "setup",
+				"outputs": [],
+				"stateMutability": "nonpayable",
+				"type": "function"
+			},
+			{
+				"inputs": [
+					{
+						"internalType": "bytes32",
+						"name": "",
+						"type": "bytes32"
+					}
+				],
+				"name": "signedMessages",
+				"outputs": [
+					{
+						"internalType": "uint256",
+						"name": "",
+						"type": "uint256"
+					}
+				],
+				"stateMutability": "view",
+				"type": "function"
+			},
+			{
+				"inputs": [
+					{
+						"internalType": "address",
+						"name": "targetContract",
+						"type": "address"
+					},
+					{
+						"internalType": "bytes",
+						"name": "calldataPayload",
+						"type": "bytes"
+					}
+				],
+				"name": "simulateAndRevert",
+				"outputs": [],
+				"stateMutability": "nonpayable",
+				"type": "function"
+			},
+			{
+				"inputs": [
+					{
+						"internalType": "address",
+						"name": "prevOwner",
+						"type": "address"
+					},
+					{
+						"internalType": "address",
+						"name": "oldOwner",
+						"type": "address"
+					},
+					{
+						"internalType": "address",
+						"name": "newOwner",
+						"type": "address"
+					}
+				],
+				"name": "swapOwner",
+				"outputs": [],
+				"stateMutability": "nonpayable",
+				"type": "function"
+			},
+			{
+				"stateMutability": "payable",
+				"type": "receive"
+			}
+		],
+		"devdoc": {
+			"author": "Stefan George - <stefan@gnosis.io>Richard Meissner - <richard@gnosis.io>",
+			"kind": "dev",
+			"methods": {
+				"addOwnerWithThreshold(address,uint256)": {
+					"details": "Allows to add a new owner to the Safe and update the threshold at the same time.      This can only be done via a Safe transaction.",
+					"params": {
+						"_threshold": "New threshold.",
+						"owner": "New owner address."
+					}
+				},
+				"approveHash(bytes32)": {
+					"details": "Marks a hash as approved. This can be used to validate a hash that is used by a signature.",
+					"params": {
+						"hashToApprove": "The hash that should be marked as approved for signatures that are verified by this contract."
+					}
+				},
+				"changeThreshold(uint256)": {
+					"details": "Allows to update the number of required confirmations by Safe owners.      This can only be done via a Safe transaction.",
+					"params": {
+						"_threshold": "New threshold."
+					}
+				},
+				"checkNSignatures(bytes32,bytes,bytes,uint256)": {
+					"details": "Checks whether the signature provided is valid for the provided data, hash. Will revert otherwise.",
+					"params": {
+						"data": "That should be signed (this is passed to an external validator contract)",
+						"dataHash": "Hash of the data (could be either a message hash or transaction hash)",
+						"requiredSignatures": "Amount of required valid signatures.",
+						"signatures": "Signature data that should be verified. Can be ECDSA signature, contract signature (EIP-1271) or approved hash."
+					}
+				},
+				"checkSignatures(bytes32,bytes,bytes)": {
+					"details": "Checks whether the signature provided is valid for the provided data, hash. Will revert otherwise.",
+					"params": {
+						"data": "That should be signed (this is passed to an external validator contract)",
+						"dataHash": "Hash of the data (could be either a message hash or transaction hash)",
+						"signatures": "Signature data that should be verified. Can be ECDSA signature, contract signature (EIP-1271) or approved hash."
+					}
+				},
+				"disableModule(address,address)": {
+					"details": "Allows to remove a module from the whitelist.      This can only be done via a Safe transaction.",
+					"params": {
+						"module": "Module to be removed.",
+						"prevModule": "Module that pointed to the module to be removed in the linked list"
+					}
+				},
+				"enableModule(address)": {
+					"details": "Allows to add a module to the whitelist.      This can only be done via a Safe transaction.",
+					"params": {
+						"module": "Module to be whitelisted."
+					}
+				},
+				"encodeTransactionData(address,uint256,bytes,uint8,uint256,uint256,uint256,address,address,uint256)": {
+					"details": "Returns the bytes that are hashed to be signed by owners.",
+					"params": {
+						"_nonce": "Transaction nonce.",
+						"baseGas": "Gas costs for that are independent of the transaction execution(e.g. base transaction fee, signature check, payment of the refund)",
+						"data": "Data payload.",
+						"gasPrice": "Maximum gas price that should be used for this transaction.",
+						"gasToken": "Token address (or 0 if ETH) that is used for the payment.",
+						"operation": "Operation type.",
+						"refundReceiver": "Address of receiver of gas payment (or 0 if tx.origin).",
+						"safeTxGas": "Gas that should be used for the safe transaction.",
+						"to": "Destination address.",
+						"value": "Ether value."
+					},
+					"returns": {
+						"_0": "Transaction hash bytes."
+					}
+				},
+				"execTransaction(address,uint256,bytes,uint8,uint256,uint256,uint256,address,address,bytes)": {
+					"details": "Allows to execute a Safe transaction confirmed by required number of owners and then pays the account that submitted the transaction.      Note: The fees are always transferred, even if the user transaction fails.",
+					"params": {
+						"baseGas": "Gas costs that are independent of the transaction execution(e.g. base transaction fee, signature check, payment of the refund)",
+						"data": "Data payload of Safe transaction.",
+						"gasPrice": "Gas price that should be used for the payment calculation.",
+						"gasToken": "Token address (or 0 if ETH) that is used for the payment.",
+						"operation": "Operation type of Safe transaction.",
+						"refundReceiver": "Address of receiver of gas payment (or 0 if tx.origin).",
+						"safeTxGas": "Gas that should be used for the Safe transaction.",
+						"signatures": "Packed signature data ({bytes32 r}{bytes32 s}{uint8 v})",
+						"to": "Destination address of Safe transaction.",
+						"value": "Ether value of Safe transaction."
+					}
+				},
+				"execTransactionFromModule(address,uint256,bytes,uint8)": {
+					"details": "Allows a Module to execute a Safe transaction without any further confirmations.",
+					"params": {
+						"data": "Data payload of module transaction.",
+						"operation": "Operation type of module transaction.",
+						"to": "Destination address of module transaction.",
+						"value": "Ether value of module transaction."
+					}
+				},
+				"execTransactionFromModuleReturnData(address,uint256,bytes,uint8)": {
+					"details": "Allows a Module to execute a Safe transaction without any further confirmations and return data",
+					"params": {
+						"data": "Data payload of module transaction.",
+						"operation": "Operation type of module transaction.",
+						"to": "Destination address of module transaction.",
+						"value": "Ether value of module transaction."
+					}
+				},
+				"getChainId()": {
+					"details": "Returns the chain id used by this contract."
+				},
+				"getModulesPaginated(address,uint256)": {
+					"details": "Returns array of modules.",
+					"params": {
+						"pageSize": "Maximum number of modules that should be returned.",
+						"start": "Start of the page."
+					},
+					"returns": {
+						"array": "Array of modules.",
+						"next": "Start of the next page."
+					}
+				},
+				"getOwners()": {
+					"details": "Returns array of owners.",
+					"returns": {
+						"_0": "Array of Safe owners."
+					}
+				},
+				"getStorageAt(uint256,uint256)": {
+					"details": "Reads `length` bytes of storage in the currents contract",
+					"params": {
+						"length": "- the number of words (32 bytes) of data to read",
+						"offset": "- the offset in the current contract's storage in words to start reading from"
+					},
+					"returns": {
+						"_0": "the bytes that were read."
+					}
+				},
+				"getTransactionHash(address,uint256,bytes,uint8,uint256,uint256,uint256,address,address,uint256)": {
+					"details": "Returns hash to be signed by owners.",
+					"params": {
+						"_nonce": "Transaction nonce.",
+						"baseGas": "Gas costs for data used to trigger the safe transaction.",
+						"data": "Data payload.",
+						"gasPrice": "Maximum gas price that should be used for this transaction.",
+						"gasToken": "Token address (or 0 if ETH) that is used for the payment.",
+						"operation": "Operation type.",
+						"refundReceiver": "Address of receiver of gas payment (or 0 if tx.origin).",
+						"safeTxGas": "Fas that should be used for the safe transaction.",
+						"to": "Destination address.",
+						"value": "Ether value."
+					},
+					"returns": {
+						"_0": "Transaction hash."
+					}
+				},
+				"isModuleEnabled(address)": {
+					"details": "Returns if an module is enabled",
+					"returns": {
+						"_0": "True if the module is enabled"
+					}
+				},
+				"removeOwner(address,address,uint256)": {
+					"details": "Allows to remove an owner from the Safe and update the threshold at the same time.      This can only be done via a Safe transaction.",
+					"params": {
+						"_threshold": "New threshold.",
+						"owner": "Owner address to be removed.",
+						"prevOwner": "Owner that pointed to the owner to be removed in the linked list"
+					}
+				},
+				"requiredTxGas(address,uint256,bytes,uint8)": {
+					"details": "Allows to estimate a Safe transaction.      This method is only meant for estimation purpose, therefore the call will always revert and encode the result in the revert data.      Since the `estimateGas` function includes refunds, call this method to get an estimated of the costs that are deducted from the safe with `execTransaction`",
+					"params": {
+						"data": "Data payload of Safe transaction.",
+						"operation": "Operation type of Safe transaction.",
+						"to": "Destination address of Safe transaction.",
+						"value": "Ether value of Safe transaction."
+					},
+					"returns": {
+						"_0": "Estimate without refunds and overhead fees (base transaction and payload data gas costs)."
+					}
+				},
+				"setFallbackHandler(address)": {
+					"details": "Allows to add a contract to handle fallback calls.      Only fallback calls without value and with data will be forwarded.      This can only be done via a Safe transaction.",
+					"params": {
+						"handler": "contract to handle fallbacks calls."
+					}
+				},
+				"setGuard(address)": {
+					"details": "Set a guard that checks transactions before execution",
+					"params": {
+						"guard": "The address of the guard to be used or the 0 address to disable the guard"
+					}
+				},
+				"setup(address[],uint256,address,bytes,address,address,uint256,address)": {
+					"details": "Setup function sets initial storage of contract.",
+					"params": {
+						"_owners": "List of Safe owners.",
+						"_threshold": "Number of required confirmations for a Safe transaction.",
+						"data": "Data payload for optional delegate call.",
+						"fallbackHandler": "Handler for fallback calls to this contract",
+						"payment": "Value that should be paid",
+						"paymentReceiver": "Adddress that should receive the payment (or 0 if tx.origin)",
+						"paymentToken": "Token that should be used for the payment (0 is ETH)",
+						"to": "Contract address for optional delegate call."
+					}
+				},
+				"simulateAndRevert(address,bytes)": {
+					"details": "Performs a delegetecall on a targetContract in the context of self. Internally reverts execution to avoid side effects (making it static). This method reverts with data equal to `abi.encode(bool(success), bytes(response))`. Specifically, the `returndata` after a call to this method will be: `success:bool || response.length:uint256 || response:bytes`.",
+					"params": {
+						"calldataPayload": "Calldata that should be sent to the target contract (encoded method name and arguments).",
+						"targetContract": "Address of the contract containing the code to execute."
+					}
+				},
+				"swapOwner(address,address,address)": {
+					"details": "Allows to swap/replace an owner from the Safe with another address.      This can only be done via a Safe transaction.",
+					"params": {
+						"newOwner": "New owner address.",
+						"oldOwner": "Owner address to be replaced.",
+						"prevOwner": "Owner that pointed to the owner to be replaced in the linked list"
+					}
+				}
+			},
+			"title": "Gnosis Safe - A multisignature wallet with support for confirmations using signed messages based on ERC191.",
+			"version": 1
+		},
+		"userdoc": {
+			"kind": "user",
+			"methods": {
+				"addOwnerWithThreshold(address,uint256)": {
+					"notice": "Adds the owner `owner` to the Safe and updates the threshold to `_threshold`."
+				},
+				"changeThreshold(uint256)": {
+					"notice": "Changes the threshold of the Safe to `_threshold`."
+				},
+				"disableModule(address,address)": {
+					"notice": "Disables the module `module` for the Safe."
+				},
+				"enableModule(address)": {
+					"notice": "Enables the module `module` for the Safe."
+				},
+				"removeOwner(address,address,uint256)": {
+					"notice": "Removes the owner `owner` from the Safe and updates the threshold to `_threshold`."
+				},
+				"requiredTxGas(address,uint256,bytes,uint8)": {
+					"notice": "Deprecated in favor of common/StorageAccessible.sol and will be removed in next version."
+				},
+				"swapOwner(address,address,address)": {
+					"notice": "Replaces the owner `oldOwner` in the Safe with `newOwner`."
+				}
+			},
+			"version": 1
+		}
+	},
+	"settings": {
+		"compilationTarget": {
+			"contracts/GnosisSafeL2.sol": "GnosisSafeL2"
+		},
+		"evmVersion": "cancun",
+		"libraries": {},
+		"metadata": {
+			"bytecodeHash": "ipfs"
+		},
+		"optimizer": {
+			"enabled": true,
+			"runs": 200
+		},
+		"remappings": []
+	},
+	"sources": {
+		"contracts/Enum.sol": {
+			"keccak256": "0xeec3f9a7ff6bdf711304ead53ca6663a1f2f2e0131be2eb2d9b79138d5ed1b98",
+			"license": "LGPL-3.0-only",
+			"urls": [
+				"bzz-raw://a06deb100786d141183dd34d78bcbfcf73f93c9e6974e655d4c64a0ea9d4a167",
+				"dweb:/ipfs/QmfTJA59LUeEiXBRj7K6UGb1XQSnEAnfdqdDH5NPA3dK5k"
+			]
+		},
+		"contracts/EtherPaymentFallback.sol": {
+			"keccak256": "0x3c339829dcf219e54ee3e0955eed08ef27208a9ab1dd72c06e2012a18c97fe92",
+			"license": "LGPL-3.0-only",
+			"urls": [
+				"bzz-raw://69b8cf2412eaa70f166413da1356e25817d716dcd332cfda5ec7746a1ab2bc05",
+				"dweb:/ipfs/QmZV86od4gRGmMjz7pqnNw6b6Rrt62Uy6vvBE12P5RqLBd"
+			]
+		},
+		"contracts/Executor.sol": {
+			"keccak256": "0x84dbe1161f8ec5670bf4b716a59aabc37664252396aac133d0a25627c5cf3b4e",
+			"license": "LGPL-3.0-only",
+			"urls": [
+				"bzz-raw://eeef5aa8aaa7a4b419636f7ae3026875580ac19a135fae3b2d038d48f0f7f67b",
+				"dweb:/ipfs/QmPimQXppAPWLGZHSN5EVNhUeX2aGU8x5ggrbcCVWZzyeq"
+			]
+		},
+		"contracts/FallbackManager.sol": {
+			"keccak256": "0x406d0bab4c8ca4dfb996eb0e8fe91154c3e13b504eb50efcce2e9a1927cfb606",
+			"license": "LGPL-3.0-only",
+			"urls": [
+				"bzz-raw://e65b4aa586cf165db30a1a8aad7ecc8b2c56d9044afb8e1de7a1f4fb0dab3a33",
+				"dweb:/ipfs/QmVXNF6pwyFAmDTq4Hy9qEGrqRfZbAyc89YZEDAaZfZpKQ"
+			]
+		},
+		"contracts/GnosisSafe.sol": {
+			"keccak256": "0xc5588c4e20b141cab3a06a1795400e44e9308892840f19be6b98d60c79025c7c",
+			"license": "LGPL-3.0-only",
+			"urls": [
+				"bzz-raw://ead57c21fab466d5277d756a09e219621fe26ae39d11b2fd7638807c07d97f17",
+				"dweb:/ipfs/QmVgdyYUQ3hWHcCCuhDgCW6GmV3hFbKn4dbXB5VyEeZrZL"
+			]
+		},
+		"contracts/GnosisSafeL2.sol": {
+			"keccak256": "0xe4aaac1b9ccf1066cf17a4b812f9d818d91d27e8adc297a2fea9064e83669000",
+			"license": "LGPL-3.0-only",
+			"urls": [
+				"bzz-raw://3bd39a6423d17ab61a43c453b188fa5f7e7c49547040efc96b1f2d2d03f35ef5",
+				"dweb:/ipfs/QmPUSHQrTNEGhfTXmF3viteG3NvnN9xv8UdBz3him3xKAz"
+			]
+		},
+		"contracts/GnosisSafeMath.sol": {
+			"keccak256": "0x95eb7aeecc9bd0317aa6a44fa5dd1418165f066cad25e207de9f753f7ec1ec98",
+			"license": "LGPL-3.0-only",
+			"urls": [
+				"bzz-raw://d05224776f27b7ed26d2503855fc2d805e56963e496dc6d2334febd4a94740cf",
+				"dweb:/ipfs/QmextbrGAK3VwqdLjRw2QzdEAVBA96m8iqKKFR8oJEZLLi"
+			]
+		},
+		"contracts/GuardManager.sol": {
+			"keccak256": "0x5d6d3cb0fb32010aa9a3dec1a3cc07810b647b67a2ffd428be558de2bde47a65",
+			"license": "LGPL-3.0-only",
+			"urls": [
+				"bzz-raw://32e3b14f069ba5ddf986dee62f708c720a10c830c74b759abd7157e0bc557d9b",
+				"dweb:/ipfs/QmcnTFyBK1wiSUVZmwm9F1eQc3ejQ8KH4WwiD6iKVtSCRc"
+			]
+		},
+		"contracts/ISignatureValidator.sol": {
+			"keccak256": "0xef9a7c640a36c511fc63c8d03d06e7e48e4d38e4100bd8bdebc642e21f74ffb0",
+			"license": "LGPL-3.0-only",
+			"urls": [
+				"bzz-raw://bdb0ebf204c36a8928ef708747eac5621d75d8373d8047721f35739ed027dd40",
+				"dweb:/ipfs/QmZQA9empjNopodvW6gPGH7Zwbv5qAJ9KBwZCE6uZVCb6Y"
+			]
+		},
+		"contracts/ModuleManager.sol": {
+			"keccak256": "0xf0a4247e256b73d486a20317d26f7a5acba155c1b10716b9b77372ab16362f4f",
+			"license": "LGPL-3.0-only",
+			"urls": [
+				"bzz-raw://ec287f6fca0f6b915a2b8f42c52901eb14a69f05c7aec45fcd9789496b3cdcff",
+				"dweb:/ipfs/QmTZrBkyVSuDAUo4CkwjNuFcxetai7zy3HeNa2qkqxs8K4"
+			]
+		},
+		"contracts/OwnerManager.sol": {
+			"keccak256": "0x5c65c5ff0cc4d3178b2f18b1ebb9cfb2c6bfcf018f0a0a8d5c920879cf84464d",
+			"license": "LGPL-3.0-only",
+			"urls": [
+				"bzz-raw://d6b196afa1dc15d228143e5aa4525f8ebc6fa28ac3ed921b329cdb201cd448c4",
+				"dweb:/ipfs/QmQzDRfvmNZRgu5htW7FvHSbYhVLfqSP1KjkZLuc73mxjy"
+			]
+		},
+		"contracts/SecuredTokenTransfer.sol": {
+			"keccak256": "0x3b6c5618b2daddaed13c5d505548259d4a08bf729eb0b9299ff84442ec813774",
+			"license": "LGPL-3.0-only",
+			"urls": [
+				"bzz-raw://2f8e88b694f9b0510a00e97d105db68cb086f213a8b1596d8027255f959dd261",
+				"dweb:/ipfs/QmSVXGhysXeiP6J3Lq1RiMKZJGCtdRQbGKnqABLcQZP5Zw"
+			]
+		},
+		"contracts/SelfAuthorized.sol": {
+			"keccak256": "0xc74bd4d830c11b2be107ce179c1ff810c3982053119a4a65a523d7e9e9a0242b",
+			"license": "LGPL-3.0-only",
+			"urls": [
+				"bzz-raw://382bacd340134797c452ba46b3796e010eebc2ff3454509caddac73458b31cda",
+				"dweb:/ipfs/QmaUFEegLEBMYXyK8oAu9y7xzu2fAvsHCPMEK73Kn87iXE"
+			]
+		},
+		"contracts/SignatureDecoder.sol": {
+			"keccak256": "0x93f37b9d9491722a0e6ac0de0619adb30daba296f4be878ede88737d7ac39a61",
+			"license": "LGPL-3.0-only",
+			"urls": [
+				"bzz-raw://fa946ed850ab3c7a854daf40243ae1223a46566ea72c3ddde21e44659c4c94b0",
+				"dweb:/ipfs/QmT14sa6hAcwKCP6MwYaZ9siq12mnY4UbUZdtzPjE4KdvC"
+			]
+		},
+		"contracts/Singleton.sol": {
+			"keccak256": "0x777b86a456bba7a1bcf4b4b6f8a5d7974b2b497b60b8abd9b568aaca6cd56812",
+			"license": "LGPL-3.0-only",
+			"urls": [
+				"bzz-raw://b869cf48d6b9053303b2a476cf01a56e7be89d0f61f53172034256dc6467bced",
+				"dweb:/ipfs/QmeF9kcrBtCVYT1JYz1q2yfQbfzEMYrcSiB6n1FUX4RarC"
+			]
+		},
+		"contracts/StorageAccessible.sol": {
+			"keccak256": "0x6addfa2b0abb23a47856909cbdf0dc4d397f9f69fce330025fba2dfb94af67e1",
+			"license": "LGPL-3.0-only",
+			"urls": [
+				"bzz-raw://fe54206a1579fba1cd8ac2236c410c2d6f268702d93eed0e7d4ed4cdee14c3ee",
+				"dweb:/ipfs/QmYv1JgCJJiegnvWiQdGfz27iVPpZ5Q8mMQKFKtrBSAADZ"
+			]
+		}
+	},
+	"version": 1
+}
